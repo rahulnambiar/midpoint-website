@@ -44,10 +44,6 @@ function Hero() {
       <div className="container">
         <div className="hero-layout">
           <div>
-            <div className="hero-badge">
-              <span className="pill">v26 · Future-Ready</span>
-              Now partnered with Anthropic
-            </div>
             <h1 className="display h1">
               The Future-Ready Enterprise, <span className="accent">delivered</span>.
             </h1>
@@ -60,7 +56,7 @@ function Hero() {
               <a href="#process" className="btn btn-ghost">See how we deliver</a>
             </div>
           </div>
-          <div className="hero-visual" aria-hidden>
+          <div className="hero-visual" aria-hidden style={{ position: "relative", minHeight: 400 }}>
             <NodeGraph />
           </div>
         </div>
@@ -453,14 +449,11 @@ const FOUNDERS = [
 ];
 
 const TEAM = [
-  { name: "[ Team Member ]", role: "VP, Delivery", tone: "d" },
-  { name: "[ Team Member ]", role: "Head of Data Cloud", tone: "a" },
-  { name: "[ Team Member ]", role: "Head of Analytics", tone: "e" },
-  { name: "[ Team Member ]", role: "Principal Architect", tone: "b" },
-  { name: "[ Team Member ]", role: "AI Practice Lead", tone: "c" },
-  { name: "[ Team Member ]", role: "Governance Lead", tone: "d" },
-  { name: "[ Team Member ]", role: "Growth Partner", tone: "e" },
-  { name: "[ Team Member ]", role: "People & Culture", tone: "a" },
+  { name: "Rivaldi", role: "Founding Member & Solutions Architect", tone: "d" },
+  { name: "Richard", role: "Founding Member & Sr Analyst", tone: "a" },
+  { name: "Harya Dimas", role: "Tech Delivery Head", tone: "e" },
+  { name: "Donald", role: "Cloud Engineering Lead", tone: "b" },
+  { name: "Rajeev Bala", role: "Chief Architect & Founder, Trifecta", tone: "c" },
 ];
 
 function About() {
