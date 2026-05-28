@@ -308,11 +308,11 @@ function Trifecta() {
                 <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
-            <a href="mailto:rajeev@trifecta.sg" style={{
+            <a href="mailto:rajeev@midpoint.id" style={{
               fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.1em",
               textTransform: "uppercase", color: "rgba(236,245,244,0.45)",
               textAlign: "center"
-            }}>rajeev@trifecta.sg</a>
+            }}>rajeev@midpoint.id</a>
           </div>
         </div>
       </div>
@@ -456,7 +456,6 @@ const TEAM = [
   { name: "Richard", role: "Founding Member & Sr Analyst", tone: "a" },
   { name: "Harya Dimas", role: "Tech Delivery Head", tone: "e" },
   { name: "Donald", role: "Cloud Engineering Lead", tone: "b" },
-  { name: "Rajeev Bala", role: "Chief Architect & Founder, Trifecta", tone: "c" },
 ];
 
 function About() {
