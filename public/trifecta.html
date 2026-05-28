@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trifecta · Bayesian Marketing Mix Modeling, by Midpoint Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="stylesheet" href="trifecta.css?v=1" />
+</head>
+<body>
+
+<!-- ============ NAV (matches Midpoint site exactly) ============ -->
+<header class="nav scrolled">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Midpoint">
+      <img src="assets/midpoint-logo.svg" alt="Midpoint" style="height: 28px; width: auto;" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#claude">AI Delivery</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="trifecta.html" style="color: var(--ink); font-weight: 600;">Trifecta</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="login.html" class="nav-login">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2.5" y="5.5" width="7" height="5" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M 4 5.5 V 4 a 2 2 0 0 1 4 0 V 5.5" stroke="currentColor" stroke-width="1.1" fill="none"/></svg>
+        Client Login
+      </a>
+      <a href="index.html#contact" class="nav-cta">
+        Contact us <span style="display: inline-block; transform: translateY(-1px);">↗</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="tri-hero">
+  <div class="container">
+    <img src="assets/trifecta-logo.svg" alt="Trifecta · Part of Midpoint Global" style="height: 64px; width: auto; margin-bottom: 28px;" />
+    <h1 style="margin-top: 8px;">
+      Design and build growth engines that run on <span class="grad">Bayesian Marketing Mix Models</span>.
+    </h1>
+    <p class="sub">
+      Bayesian causal Marketing Mix Models on Google Meridian, paired with model calibration and a hypothesis engine.
+      Growth becomes predictable, privacy-proof, and ready to answer the what-if questions you can't ask today.
+    </p>
+    <div class="tri-chips">
+      <span class="tri-chip">Bayesian Causal MMM</span>
+      <span class="tri-chip">Meridian · Open Source</span>
+      <span class="tri-chip">Geo-Holdout Calibration</span>
+      <span class="tri-chip">Ads Data Hub</span>
+    </div>
+    <div class="tri-cta">
+      <a href="mailto:rajeev@trifecta.sg" class="btn btn-primary">Talk to Trifecta →</a>
+      <a href="#approach" class="btn btn-ghost">How it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">The problem</div>
+        <h2 class="h2" style="margin-top: 18px;">The classic CMO problem, made worse by privacy walls.</h2>
+      </div>
+      <div class="tri-quote">
+        “Half the money I spend on growth is wasted; the trouble is I don't know which half.”
+        <span class="who">Every CMO, paraphrased</span>
+      </div>
+    </div>
+
+    <div class="tri-3col">
+      <div class="tri-card">
+        <span class="num">01 · Attribution</span>
+        <h3>Tangled journeys</h3>
+        <p>Customers cross devices, channels and apps. Last-click and platform-reported ROAS double-count the same conversions.</p>
+      </div>
+      <div class="tri-card">
+        <span class="num">02 · Privacy</span>
+        <h3>Privacy walls</h3>
+        <p>Cookies, ATT and walled gardens have broken deterministic attribution. The signal you used to lean on is gone.</p>
+      </div>
+      <div class="tri-card">
+        <span class="num">03 · Planning</span>
+        <h3>Unscientific budgeting</h3>
+        <p>Incrementality and what-if questions are treated as unanswerable, so budgets get set with obsolete heuristics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH (4 PILLARS) ============ -->
+<section class="section tri-pillars-band" id="approach">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">The Trifecta approach</div>
+        <h2 class="h2" style="margin-top: 18px;">We are not just a platform. We are the team that runs it.</h2>
+      </div>
+      <p class="lede">
+        Four engines that work together, with humans firmly in the loop. Software does the heavy compute.
+        People do the judgement, calibration, and quality control that turn a model into a decision your CFO will sign.
+      </p>
+    </div>
+
+    <div class="tri-pillars">
+      <div class="tri-pillar">
+        <span class="label-mono">Pillar 01 · Model</span>
+        <h3>Google Meridian</h3>
+        <p>Sophisticated Bayesian causal inference that reveals the true, holistic impact of every investment, with full uncertainty quantification, at zero software cost.</p>
+        <div class="footer"><span>Sampler</span><b>NUTS · 4 chains</b></div>
+      </div>
+      <div class="tri-pillar">
+        <span class="label-mono">Pillar 02 · Calibrate</span>
+        <h3>Bayesian Calibration</h3>
+        <p>Continuous geo-holdout experiments feed measured causal lift back into the model as priors, so accuracy compounds instead of decaying.</p>
+        <div class="footer"><span>Feedback</span><b>Geo-test → prior</b></div>
+      </div>
+      <div class="tri-pillar">
+        <span class="label-mono">Pillar 03 · Hypothesise</span>
+        <h3>Hypothesis Engine</h3>
+        <p>Privacy-safe clean-room signals from Ads Data Hub. Cross-device journeys and data-driven attribution generate the hypotheses every experiment then proves.</p>
+        <div class="footer"><span>Source</span><b>Ads Data Hub · DDA</b></div>
+      </div>
+      <div class="tri-pillar">
+        <span class="label-mono">Pillar 04 · Human in loop</span>
+        <h3>Operators, not just software</h3>
+        <p>Senior operators sit at every step. They tune priors, vet experiments, sense-check outputs, and translate posteriors into recommendations a CFO can defend.</p>
+        <div class="footer"><span>Coverage</span><b>2 ops · weekly QA</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE QUESTIONS ============ -->
+<section class="section" id="questions">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Navigating growth</div>
+        <h2 class="h2" style="margin-top: 18px;">The questions you should be asking, answered.</h2>
+      </div>
+      <p class="lede">
+        The platform is built around three questions every growth team has and very few can answer.
+      </p>
+    </div>
+
+    <div class="tri-q">
+      <div class="tri-q-card">
+        <span class="n">01</span>
+        <h3>Incrementality</h3>
+        <p>Which spends are driving true business lift, separate from the customers we would have won anyway?</p>
+        <div class="ask">“What happens if I eliminate all non-SAN app network spending?”</div>
+      </div>
+      <div class="tri-q-card">
+        <span class="n">02</span>
+        <h3>What-if simulations</h3>
+        <p>How does the system respond to a change in spend, mix, or channel before we commit a single dollar?</p>
+        <div class="ask">“If I raise TV TRPs by 20%, what new customer acquisition can I expect, and at what cost?”</div>
+      </div>
+      <div class="tri-q-card">
+        <span class="n">03</span>
+        <h3>Efficiency &amp; scale</h3>
+        <p>Where are we under-investing in channels that work, and over-investing in channels that don't?</p>
+        <div class="ask">“Which 3 channels should absorb my next million in budget?”</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO COSTLY ERRORS ============ -->
+<section class="section" id="errors" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Two costly errors</div>
+        <h2 class="h2" style="margin-top: 18px;">The mistakes a real MMM stops you making.</h2>
+      </div>
+      <p class="lede">
+        Most growth losses live in one of these two buckets. Trifecta is engineered to spot both.
+      </p>
+    </div>
+
+    <div class="tri-err">
+      <div class="tri-err-card commission">
+        <div class="sign">−</div>
+        <h3>Errors of commission</h3>
+        <p><b>Spending on channels that don't drive the business.</b> Money wasted where we should not have spent. Last-click attribution loves these channels. The geo-holdout test exposes them. Trifecta surfaces them inside the operator console so they can be defunded with conviction.</p>
+        <div class="sig">Typical signature · <b>High reported ROAS · near-zero incremental lift in regional test.</b></div>
+      </div>
+      <div class="tri-err-card omission">
+        <div class="sign">+</div>
+        <h3>Errors of omission</h3>
+        <p><b>Failing to invest in channels that do drive the business.</b> Money never spent where we should have spent it. Often the slowest-burning, hardest-to-attribute channels like upper-funnel video, OOH, and podcast. They compound but never close a session.</p>
+        <div class="sig">Typical signature · <b>Low last-click share · positive marginal ROI past current spend.</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE (3 layers) ============ -->
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Growth engine architecture</div>
+        <h2 class="h2" style="margin-top: 18px;">Understand. Measure. Decide.</h2>
+      </div>
+      <p class="lede">
+        Three loops that compose into a single engine. Each one feeds the next, and each one improves the last.
+      </p>
+    </div>
+
+    <div class="tri-stack">
+      <div class="tri-layer">
+        <div class="layer-head">
+          <span class="layer-num">Layer 01</span>
+          <h3>Understand &amp; model</h3>
+          <span class="layer-tag">Unified causal measurement engine</span>
+        </div>
+        <ul>
+          <li>Channel relationships</li>
+          <li>Audience segments</li>
+          <li>Heuristic development</li>
+          <li>External &amp; control variables</li>
+          <li>Seasonality &amp; trend</li>
+        </ul>
+      </div>
+
+      <div class="tri-stack-arrow">↓</div>
+
+      <div class="tri-layer">
+        <div class="layer-head">
+          <span class="layer-num">Layer 02</span>
+          <h3>Measure &amp; prove</h3>
+          <span class="layer-tag">Bayesian MMM + Calibration</span>
+        </div>
+        <ul>
+          <li>Causal MMM (Meridian)</li>
+          <li>Incrementality tests</li>
+          <li>Model calibration</li>
+          <li>Forecasting</li>
+          <li>Marginal ROI &amp; response curves</li>
+        </ul>
+      </div>
+
+      <div class="tri-stack-arrow">↓</div>
+
+      <div class="tri-layer">
+        <div class="layer-head">
+          <span class="layer-num">Layer 03</span>
+          <h3>Decide &amp; act</h3>
+          <span class="layer-tag">AI decision layer</span>
+        </div>
+        <ul>
+          <li>Budget optimisation</li>
+          <li>Scenario planning</li>
+          <li>CFO reporting</li>
+          <li>Creative &amp; promo decisions</li>
+          <li>Conversational AI access</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRIFECTA SIGNAL ============ -->
+<section class="section" id="signal" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <div class="tri-signal">
+      <div class="copy">
+        <div class="kicker">Trifecta Signal</div>
+        <h2 class="h2" style="margin-top: 18px;">Conversational decision layer for everyone who touches budget.</h2>
+        <p class="muted" style="margin-top: 20px; font-size: 17px; line-height: 1.6; max-width: 50ch;">
+          The single most important feature for your team. Anyone in the organisation can ask the model anything,
+          in plain language, and get a defensible answer in seconds.
+        </p>
+        <div class="tri-signal-bullets">
+          <div class="tri-signal-bullet"><b>Plain language</b><span>No SQL, no dashboards. Type a question, get a posterior-backed answer with 90% credible intervals.</span></div>
+          <div class="tri-signal-bullet"><b>Always live</b><span>Reads from the latest posterior artifact. The answer reflects the most recent training run.</span></div>
+          <div class="tri-signal-bullet"><b>Auditable</b><span>Every answer cites model version, run ID, and confidence band. Decisions stay defensible.</span></div>
+          <div class="tri-signal-bullet"><b>Built on MCP</b><span>An MCP server over Meridian. Tools the operator turns on per client, no model retraining required.</span></div>
+        </div>
+      </div>
+
+      <div class="tri-chat">
+        <div class="ch-head">
+          <div class="title">Signal · Aeon Skincare</div>
+          <div class="live">LIVE · POSTERIOR #28</div>
+        </div>
+        <div class="bubble-user">If I raise TV TRPs by 20% next quarter, what new customer acquisition can I expect, and at what cost?</div>
+        <div class="bubble-agent">
+          Expected lift: <b>+4,200 new customers / month</b> (90% CI 3,100 to 5,300). Marginal CAC rises from S$38 to S$46. The Hill curve flattens past +28% TRPs, so diminishing returns kick in above that point.
+          <div class="meta">POSTERIOR · RUN #28 · CONFIDENCE: HIGH · 4 CHANNELS REFERENCED</div>
+        </div>
+        <div class="bubble-user">Show me the optimal mix for S$1.2M next month.</div>
+        <div class="bubble-agent">
+          Recommended split (90% CI): Paid Search <b>26%</b>, YouTube <b>22%</b>, TV <b>20%</b>, Meta <b>18%</b>, OOH <b>14%</b>. Projected outcome lift: <b>+11%</b> vs current allocation.
+          <div class="meta">BUDGET OPTIMISER · RUN #28 · CONSTRAINTS RESPECTED</div>
+        </div>
+        <div class="ch-input">
+          /optimise · /forecast · /compare · or just ask…
+          <span class="send">SEND</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY LIFECYCLE ============ -->
+<section class="section" id="lifecycle">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Delivery lifecycle</div>
+        <h2 class="h2" style="margin-top: 18px;">Design. Build. Operate. Transfer.</h2>
+      </div>
+      <p class="lede">
+        Five stages, repeated per client. The first run takes weeks. Subsequent runs are an operator job, not a project.
+      </p>
+    </div>
+
+    <div class="tri-life">
+      <div class="tri-life-stage">
+        <span class="n">01 · Audit</span>
+        <h4>Growth &amp; data audit</h4>
+        <p>Audit the spend, audit the data. Assess every investment and every data stream natively available in BigQuery.</p>
+      </div>
+      <div class="tri-life-stage">
+        <span class="n">02 · Ingest</span>
+        <h4>Data ingestion</h4>
+        <p>Capture, clean, inject every input — API or upload — into BigQuery. Signal separated from noise, mapped per source.</p>
+      </div>
+      <div class="tri-life-stage">
+        <span class="n">03 · Calibrate</span>
+        <h4>Model calibration</h4>
+        <p>Continuously run geo-holdout incrementality experiments and inject results into the model as deterministic priors.</p>
+      </div>
+      <div class="tri-life-stage">
+        <span class="n">04 · Hypothesise</span>
+        <h4>Hypothesis formulation</h4>
+        <p>Mine Ads Data Hub DDA data for the hypotheses worth testing. Every experiment closes a loop the model needs closed.</p>
+      </div>
+      <div class="tri-life-stage">
+        <span class="n">05 · Democratise</span>
+        <h4>Put it in everyone's chat</h4>
+        <p>Connect Meridian to an MCP server. Anyone in the org can query the MMM in plain language, then act on what it says.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERNALISE ============ -->
+<section class="section" id="internalise" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Internalise the engine</div>
+        <h2 class="h2" style="margin-top: 18px;">Growth is too important to be outsourced.</h2>
+      </div>
+      <p class="lede">
+        Growth is the lifeblood of the business. It cannot live with consultants or third-party platforms.
+        It has to be managed and diffused from inside the organisation, with democratic access to all.
+      </p>
+    </div>
+
+    <div class="tri-int">
+      <div class="tri-int-step">
+        <span class="stage">We design</span>
+        <h3>Your growth engine</h3>
+        <p>Per-brand model archetype, prior catalogue, channel taxonomy and experiment cadence. Designed around your business, not a generic template.</p>
+      </div>
+      <div class="tri-int-step">
+        <span class="stage">We build &amp; operate</span>
+        <h3>The platform around it</h3>
+        <p>Two operators run the data pipelines, calibration loops and training runs while the engine matures inside your cloud, from month one to month twelve.</p>
+      </div>
+      <div class="tri-int-step">
+        <span class="stage">Then we transfer</span>
+        <h3>Ownership to you</h3>
+        <p>The model, the data, the priors, the playbook. All in your GCP project. We hand the operator console and Signal to your team. The engine is yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANTI-PATTERNS ============ -->
+<section class="section" id="anti">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Poor MMM practices</div>
+        <h2 class="h2" style="margin-top: 18px;">Five anti-patterns we refuse to repeat.</h2>
+      </div>
+      <p class="lede">
+        If you've tried MMM before and it didn't stick, one of these is usually why.
+      </p>
+    </div>
+
+    <div class="tri-anti">
+      <div class="tri-anti-card">
+        <span class="num">Anti-pattern 01</span>
+        <h4>Annual planning cycles</h4>
+        <p>Engaging MMM once a year. The world is dynamic. The planning cycle must be quarters or weeks, not seasons.</p>
+      </div>
+      <div class="tri-anti-card">
+        <span class="num">Anti-pattern 02</span>
+        <h4>Post-report abandonment</h4>
+        <p>Letting data ingestion and Bayesian priors decay after the consultant report ships. A static MMM is a dead MMM.</p>
+      </div>
+      <div class="tri-anti-card">
+        <span class="num">Anti-pattern 03</span>
+        <h4>Irregular prior updates</h4>
+        <p>Not feeding priors systematically keeps models unintelligent. Regular updates compound into real knowledge.</p>
+      </div>
+      <div class="tri-anti-card">
+        <span class="num">Anti-pattern 04</span>
+        <h4>Ignoring Ads Data Hub</h4>
+        <p>Overlooking the only privacy-safe clean-room for cross-device customer journey insights, out of the box and at scale.</p>
+      </div>
+      <div class="tri-anti-card">
+        <span class="num">Anti-pattern 05</span>
+        <h4>Lack of democratisation</h4>
+        <p>MMM has to be accessible via conversational AI. Without that, it never becomes part of the company's growth DNA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ / ENGAGEMENT ============ -->
+<section class="section" id="faq" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">Engagement details</div>
+        <h2 class="h2" style="margin-top: 18px;">Frequently asked questions.</h2>
+      </div>
+      <p class="lede">
+        Trifecta is built for serious growth budgets. Here's what we look for and what we charge.
+      </p>
+    </div>
+
+    <div class="tri-faq">
+      <div class="tri-faq-row">
+        <div class="k">Minimum annual spend</div>
+        <div class="v">Requires at least <b>US$1M / year</b> on paid media, advertising and marketing combined.</div>
+      </div>
+      <div class="tri-faq-row">
+        <div class="k">Data duration</div>
+        <div class="v">At least <b>2 years</b> of weekly time-series to account for seasonality. Larger datasets are preferred.</div>
+      </div>
+      <div class="tri-faq-row">
+        <div class="k">Supported data types</div>
+        <div class="v">Any time-series variable. Competitor activity, offline media, stock volatility (VIX), weather, query volume. Any signal that moves.</div>
+      </div>
+      <div class="tri-faq-row">
+        <div class="k">Ideal tech stack</div>
+        <div class="v"><b>BigQuery</b> is the preferred warehouse. The engine runs on <b>Google Meridian</b> with <b>Vertex AI</b>.</div>
+      </div>
+      <div class="tri-faq-row">
+        <div class="k">Costs &amp; expertise</div>
+        <div class="v">Setup from <b>US$10K</b>. Expert engagements average <b>US$50K+</b> per year. Built on open-source models, with zero software licence cost.</div>
+      </div>
+      <div class="tri-faq-row">
+        <div class="k">Expected ROI</div>
+        <div class="v">Conservatively, <b>15%+ more outcomes</b> at the same cost, or <b>15%+ cost reduction</b> at the same outcomes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="tri-head">
+      <div>
+        <div class="kicker">The team</div>
+        <h2 class="h2" style="margin-top: 18px;">Operators across the region. Advisors at the edges.</h2>
+      </div>
+      <p class="lede">
+        Partners who run the engagement, supported by domain advisors with deep MMM and category expertise.
+        HQ Singapore · Indonesia.
+      </p>
+    </div>
+
+    <div class="tri-team">
+      <div class="tri-person">
+        <span class="role-tag">Co-Founder &amp; Partner</span>
+        <div class="avatar">RB</div>
+        <h3>Rajeev Bala</h3>
+        <span class="role">Marketing Science &amp; Business</span>
+        <p>30+ years in performance media, globally. Most recently VP of Performance Marketing at Tokopedia. Previously Global Managing Director of Havas Performance, leading the performance media practice across the network.</p>
+        <span class="specialty">Measurement · Havas · Tokopedia</span>
+      </div>
+      <div class="tri-person">
+        <span class="role-tag">Co-Founder &amp; MD, Midpoint Global</span>
+        <div class="avatar">SU</div>
+        <h3>Sai Uday</h3>
+        <span class="role">Regional Growth · Indonesia</span>
+        <p>15+ years in data &amp; analytics. Leads Midpoint Global in Indonesia and the wider archipelago. Deep data and analytics expertise across South-East Asian media, retail and consumer businesses.</p>
+        <span class="specialty">South-East Asia · Midpoint Global · MD</span>
+      </div>
+      <div class="tri-person">
+        <span class="role-tag">Co-Founder &amp; Partner</span>
+        <div class="avatar">RN</div>
+        <h3>Rahul Nambiar</h3>
+        <span class="role">Commercial &amp; Technology</span>
+        <p>20+ years in performance media, marketing &amp; analytics. An entrepreneur who bootstrapped his own performance agency from zero, then exited it to Dentsu. Brings the commercial and technology lens.</p>
+        <span class="specialty">Commercial · Entrepreneur · Exit to Dentsu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="tri-cta-band" id="contact">
+  <div class="container">
+    <div class="tri-cta-inner">
+      <div>
+        <div class="kicker" style="color: var(--accent-2);">Let's build it</div>
+        <h2 class="h2" style="margin-top: 18px;">Your growth engine. Designed, built, and handed back to you.</h2>
+        <p>
+          Two operators, one platform, your brand. Bayesian causal MMM with calibration and hypothesis loops baked in,
+          and a conversational decision layer for everyone who touches budget.
+        </p>
+        <div class="tri-cta">
+          <a href="mailto:rajeev@trifecta.sg" class="btn btn-primary">rajeev@trifecta.sg →</a>
+          <a href="index.html" class="btn btn-ghost">Back to Midpoint</a>
+        </div>
+      </div>
+
+      <div class="tri-offices">
+        <div class="tri-office">
+          <div class="k">Singapore HQ</div>
+          <address>
+            151 Chin Swee Road<br />
+            #02-04A Manhattan House<br />
+            Singapore 169876
+          </address>
+          <div class="entity">FVG CAPITAL PTE. LTD. · REG. 201901598G</div>
+        </div>
+        <div class="tri-office">
+          <div class="k">Jakarta</div>
+          <address>
+            One Pacific Place, 15th Floor<br />
+            Jl. Jend. Sudirman Kav. 52–53<br />
+            Senayan, Kebayoran Baru<br />
+            Jakarta Selatan 12190
+          </address>
+          <div class="entity">PT MIDPOINT TEKNOLOGI GLOBAL</div>
+        </div>
+        <div class="tri-office">
+          <div class="k">Stack</div>
+          <address>
+            Google Meridian · Vertex AI · BigQuery · Ads Data Hub
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (matches Midpoint site exactly) ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <img src="assets/midpoint-logo.svg" alt="Midpoint" style="height: 28px; width: auto; color: var(--ink);" />
+        <p style="margin-top: 16px; max-width: 36ch;">
+          The future-ready enterprise, delivered. Jakarta-based, globally benchmarked.
+        </p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="index.html#services">Data &amp; AI</a></li><li><a href="trifecta.html">Marketing Mix Modeling</a></li><li><a href="index.html#services">Customer 360</a></li><li><a href="index.html#services">Mixpanel</a></li><li><a href="index.html#services">Managed Services</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="index.html#about">About</a></li><li><a href="index.html#about">Team</a></li><li><a href="trifecta.html">Trifecta</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="login.html">Client Portal</a></li></ul>
+      </div>
+      <div>
+        <h4>Partners</h4>
+        <ul><li>Salesforce</li><li>Mixpanel</li><li>GCP</li><li>Google Meridian</li></ul>
+      </div>
+    </div>
+
+    <div class="container" style="padding: 0;">
+      <div class="footer-wordmark">midpoint.</div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 PT Midpoint Teknologi Global</div>
+      <div>Jakarta · Singapore · Asia</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

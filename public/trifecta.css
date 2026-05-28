@@ -1,0 +1,479 @@
+/* ---------- Trifecta landing page ---------- */
+/* Reuses tokens + base from styles.css; adds Trifecta-specific patterns. */
+
+/* === Trifecta wordmark (PDF-style spaced caps) === */
+.tri-wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(14px, 1.4vw, 18px);
+  letter-spacing: 0.42em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* === Nav variant === */
+.tri-mark {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--font-display); font-weight: 600; font-size: 22px;
+  letter-spacing: -0.02em; color: var(--ink);
+}
+.tri-mark .glyph {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(135deg, #05927D 0%, #0ADE7C 100%);
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--ink);
+}
+.tri-mark .sub {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim);
+  margin-top: 2px; font-weight: 500;
+}
+.tri-mark .stack { display: flex; flex-direction: column; gap: 0; }
+
+/* === Hero === */
+.tri-hero {
+  position: relative; overflow: hidden;
+  padding-top: 168px; padding-bottom: clamp(80px, 12vw, 140px);
+  background:
+    radial-gradient(ellipse 80% 60% at 80% 10%, var(--accent-soft), transparent 60%),
+    var(--bg);
+}
+.tri-hero .container { position: relative; z-index: 1; }
+.tri-hero .kicker { color: var(--accent); }
+.tri-hero .kicker::before { background: var(--accent); }
+.tri-hero h1 {
+  margin-top: 24px;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.04; letter-spacing: -0.028em;
+  max-width: 22ch;
+  color: var(--ink);
+}
+.tri-hero h1 .grad {
+  background: linear-gradient(90deg, #05927D 0%, #0ADE7C 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-style: italic; font-weight: 500;
+}
+.tri-hero .sub {
+  margin-top: 28px; max-width: 64ch;
+  font-size: clamp(17px, 1.5vw, 20px); color: var(--ink-muted); line-height: 1.55;
+}
+.tri-chips { margin-top: 36px; display: flex; gap: 8px; flex-wrap: wrap; }
+.tri-chip {
+  padding: 8px 14px; border-radius: 999px;
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: var(--accent-soft); color: var(--accent);
+  border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+}
+.tri-cta { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+
+/* === Section head shared === */
+.tri-head {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 48px; align-items: end; padding-bottom: 48px;
+}
+@media (max-width: 820px) { .tri-head { grid-template-columns: 1fr; gap: 24px; padding-bottom: 32px; } }
+.tri-head .h2 { color: var(--ink); }
+.tri-head .lede { color: var(--ink-muted); font-size: 17px; line-height: 1.55; max-width: 52ch; }
+
+/* === Generic card === */
+.tri-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: var(--bg);
+  display: flex; flex-direction: column; gap: 12px;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.tri-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.tri-card .num {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-dim);
+}
+.tri-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: -0.015em; color: var(--ink); }
+.tri-card p { color: var(--ink-muted); font-size: 14px; line-height: 1.55; }
+
+/* === Pull quote === */
+.tri-quote {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(24px, 3vw, 36px);
+  letter-spacing: -0.018em; line-height: 1.2;
+  color: var(--ink);
+  max-width: 26ch;
+  padding-left: 20px;
+  border-left: 3px solid var(--accent);
+}
+.tri-quote .who {
+  display: block; margin-top: 16px;
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-dim); font-style: normal; font-weight: 500;
+}
+
+/* === Problem (3-col) === */
+.tri-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 820px) { .tri-3col { grid-template-columns: 1fr; } }
+
+/* === Pillars (4-up, dark) === */
+.tri-pillars-band {
+  background: var(--ink); color: var(--bg);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.tri-pillars-band .kicker { color: var(--accent-2); }
+.tri-pillars-band .kicker::before { background: var(--accent-2); }
+.tri-pillars-band .h2 { color: var(--bg); }
+.tri-pillars-band .lede { color: rgba(255,255,255,0.62); }
+
+.tri-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 1080px) { .tri-pillars { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .tri-pillars { grid-template-columns: 1fr; } }
+
+.tri-pillar {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  min-height: 280px;
+}
+.tri-pillar .label-mono {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent-2);
+}
+.tri-pillar h3 { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.015em; color: var(--bg); }
+.tri-pillar p { color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.55; }
+.tri-pillar .footer {
+  margin-top: auto; padding-top: 18px;
+  border-top: 1px dashed rgba(255,255,255,0.18);
+  display: flex; justify-content: space-between;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.tri-pillar .footer b { color: var(--accent-2); font-weight: 500; }
+
+/* === Questions (3 big numbered) === */
+.tri-q { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 820px) { .tri-q { grid-template-columns: 1fr; } }
+.tri-q-card {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line-strong);
+}
+.tri-q-card .n {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 52px; letter-spacing: -0.04em; line-height: 1;
+  color: var(--accent);
+}
+.tri-q-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.015em; color: var(--ink); }
+.tri-q-card p { color: var(--ink-muted); font-size: 14px; line-height: 1.55; }
+.tri-q-card .ask {
+  margin-top: 8px; padding: 14px 16px;
+  border-radius: 10px; background: var(--bg-elev);
+  font-size: 13px; color: var(--ink); font-style: italic;
+  border-left: 3px solid var(--accent);
+}
+
+/* === Two errors === */
+.tri-err { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 820px) { .tri-err { grid-template-columns: 1fr; } }
+.tri-err-card {
+  position: relative;
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.tri-err-card .sign {
+  position: absolute; top: 28px; right: 28px;
+  width: 48px; height: 48px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 28px;
+}
+.tri-err-card.commission .sign { background: rgba(212,58,58,0.10); color: #B12F2F; }
+.tri-err-card.omission .sign { background: var(--accent-soft); color: var(--accent); }
+.tri-err-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 24px; letter-spacing: -0.015em; margin-bottom: 14px; max-width: 18ch; }
+.tri-err-card p { color: var(--ink-muted); font-size: 15px; line-height: 1.55; max-width: 56ch; }
+.tri-err-card .sig {
+  margin-top: 20px; padding-top: 14px; border-top: 1px dashed var(--line-strong);
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--ink-dim); text-transform: uppercase;
+}
+.tri-err-card .sig b { color: var(--ink); font-weight: 500; text-transform: none; letter-spacing: 0; }
+
+/* === Architecture stack (3 layers) === */
+.tri-stack { display: flex; flex-direction: column; gap: 12px; }
+.tri-layer {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  background: var(--bg);
+  display: grid; grid-template-columns: 240px 1fr;
+  gap: 32px; align-items: center;
+}
+@media (max-width: 820px) { .tri-layer { grid-template-columns: 1fr; } }
+.tri-layer .layer-head { display: flex; flex-direction: column; gap: 6px; }
+.tri-layer .layer-num {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent);
+}
+.tri-layer h3 { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.015em; color: var(--ink); }
+.tri-layer .layer-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-dim); text-transform: uppercase; margin-top: 4px; }
+.tri-layer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.tri-layer li {
+  padding: 6px 12px; border-radius: 6px;
+  background: var(--bg-elev); border: 1px solid var(--line);
+  font-size: 13px; color: var(--ink);
+}
+.tri-stack-arrow {
+  text-align: center; font-family: var(--font-mono); font-size: 18px;
+  color: var(--ink-dim); padding: 4px 0;
+}
+
+/* === Signal (conversational preview) === */
+.tri-signal {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: start;
+}
+@media (max-width: 880px) { .tri-signal { grid-template-columns: 1fr; } }
+.tri-signal .copy h2 { color: var(--ink); }
+.tri-signal-bullets { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
+@media (max-width: 540px) { .tri-signal-bullets { grid-template-columns: 1fr; } }
+.tri-signal-bullet b { display: block; margin-bottom: 4px; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--ink); }
+.tri-signal-bullet span { color: var(--ink-muted); font-size: 13px; line-height: 1.5; }
+
+.tri-chat {
+  background: #071A1E; color: #ECF5F4;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 22px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.tri-chat .ch-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.tri-chat .ch-head .title { font-family: var(--font-display); font-weight: 600; font-size: 15px; }
+.tri-chat .ch-head .live {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+  color: var(--accent-2); display: inline-flex; align-items: center; gap: 6px;
+}
+.tri-chat .ch-head .live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 10px var(--accent-2); }
+.tri-chat .bubble-user {
+  align-self: flex-end; max-width: 78%;
+  background: rgba(255,255,255,0.06);
+  padding: 12px 14px; border-radius: 12px 12px 4px 12px;
+  font-size: 14px; line-height: 1.5;
+}
+.tri-chat .bubble-agent {
+  max-width: 88%;
+  background: rgba(10,222,124,0.06);
+  border: 1px solid rgba(10,222,124,0.18);
+  padding: 14px 16px; border-radius: 12px 12px 12px 4px;
+  font-size: 14px; line-height: 1.55;
+}
+.tri-chat .bubble-agent b { color: var(--accent-2); }
+.tri-chat .bubble-agent .meta {
+  margin-top: 10px; padding-top: 8px;
+  border-top: 1px dashed rgba(255,255,255,0.18);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+}
+.tri-chat .ch-input {
+  display: flex; gap: 8px; align-items: center;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  font-family: var(--font-mono); font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+.tri-chat .ch-input .send {
+  margin-left: auto;
+  background: var(--accent-2); color: var(--ink);
+  padding: 4px 10px; border-radius: 6px; font-weight: 600;
+  font-family: var(--font-body); font-size: 11px; letter-spacing: 0.12em;
+}
+
+/* === Lifecycle (5 stages with arrows) === */
+.tri-life { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; position: relative; }
+@media (max-width: 1080px) { .tri-life { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .tri-life { grid-template-columns: 1fr; } }
+.tri-life-stage {
+  padding: 28px 20px;
+  background: var(--bg);
+  border-top: 1px solid var(--line-strong);
+  display: flex; flex-direction: column; gap: 12px;
+  min-height: 220px;
+  position: relative;
+}
+.tri-life-stage::before {
+  content: ""; position: absolute; top: -1px; left: 0; width: 32px; height: 3px;
+  background: var(--accent);
+}
+.tri-life-stage .n {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent);
+}
+.tri-life-stage h4 { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.01em; color: var(--ink); }
+.tri-life-stage p { color: var(--ink-muted); font-size: 13px; line-height: 1.55; }
+
+/* === Internalise (3 steps) === */
+.tri-int { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 820px) { .tri-int { grid-template-columns: 1fr; } }
+.tri-int-step {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.tri-int-step .stage {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--accent); font-weight: 600;
+}
+.tri-int-step h3 { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.015em; color: var(--ink); max-width: 14ch; }
+.tri-int-step p { color: var(--ink-muted); font-size: 14px; line-height: 1.55; }
+
+/* === Anti-patterns (5 across) === */
+.tri-anti { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+@media (max-width: 1080px) { .tri-anti { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .tri-anti { grid-template-columns: 1fr; } }
+.tri-anti-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.tri-anti-card .num {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  color: #B12F2F; text-transform: uppercase; font-weight: 600;
+}
+.tri-anti-card .num::before { content: "✕"; font-family: var(--font-display); font-size: 14px; }
+.tri-anti-card h4 { font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: -0.01em; color: var(--ink); max-width: 18ch; }
+.tri-anti-card p { color: var(--ink-muted); font-size: 13px; line-height: 1.5; }
+
+/* === FAQ table === */
+.tri-faq {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow: hidden;
+}
+.tri-faq-row {
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: 32px; padding: 24px 32px;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.tri-faq-row:last-child { border-bottom: 0; }
+@media (max-width: 720px) { .tri-faq-row { grid-template-columns: 1fr; gap: 8px; padding: 20px; } }
+.tri-faq-row .k {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-dim); font-weight: 600;
+}
+.tri-faq-row .v { color: var(--ink); font-size: 15px; line-height: 1.55; }
+.tri-faq-row .v b { font-weight: 600; }
+
+/* === Team === */
+.tri-team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 880px) { .tri-team { grid-template-columns: 1fr; } }
+.tri-person {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.tri-person .role-tag {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent); font-weight: 600;
+}
+.tri-person .avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--ink); display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 18px;
+}
+.tri-person h3 { font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: -0.015em; color: var(--ink); }
+.tri-person .role { font-size: 13px; color: var(--ink-muted); }
+.tri-person .specialty {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-dim);
+  padding: 6px 0; border-top: 1px dashed var(--line-strong); margin-top: 4px;
+}
+.tri-person p { color: var(--ink-muted); font-size: 13px; line-height: 1.55; }
+
+/* === CTA / contact === */
+.tri-cta-band {
+  background: var(--ink); color: var(--bg);
+  position: relative; overflow: hidden;
+}
+.tri-cta-band .container { position: relative; z-index: 1; }
+.tri-cta-band::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 90% 50%, rgba(10,222,124,0.12), transparent 70%);
+}
+.tri-cta-inner {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 64px; padding: clamp(56px, 8vw, 100px) 0;
+  align-items: center;
+}
+@media (max-width: 880px) { .tri-cta-inner { grid-template-columns: 1fr; gap: 40px; } }
+.tri-cta-band h2 { color: var(--bg); max-width: 16ch; }
+.tri-cta-band p { color: rgba(255,255,255,0.7); margin-top: 22px; font-size: 17px; max-width: 50ch; line-height: 1.55; }
+.tri-cta-band .btn-primary { background: var(--accent-2); color: var(--ink); }
+.tri-cta-band .btn-primary:hover { background: #08C075; }
+.tri-cta-band .btn-ghost { color: var(--bg); border-color: rgba(255,255,255,0.24); }
+.tri-cta-band .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+
+.tri-offices {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 0;
+}
+.tri-office {
+  padding: 18px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.12);
+}
+.tri-office:first-child { padding-top: 0; }
+.tri-office:last-child  { border-bottom: 0; padding-bottom: 0; }
+.tri-office .k {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent-2); margin-bottom: 8px;
+  font-weight: 600;
+}
+.tri-office address {
+  font-style: normal; font-size: 14px; line-height: 1.6; color: var(--bg);
+}
+.tri-office .entity {
+  margin-top: 6px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em;
+  color: rgba(255,255,255,0.5); text-transform: uppercase;
+}
+
+/* === Footer === */
+.tri-footer {
+  padding: 56px 0 40px;
+  background: var(--bg-elev);
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted); font-size: 13px;
+}
+.tri-footer-top {
+  display: flex; justify-content: space-between; align-items: start;
+  flex-wrap: wrap; gap: 32px;
+  padding-bottom: 32px; border-bottom: 1px solid var(--line);
+}
+.tri-footer-top .blurb { max-width: 36ch; }
+.tri-footer-bottom {
+  padding-top: 24px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--ink-dim);
+}
