@@ -265,6 +265,62 @@ const STEPS = [
   },
 ];
 
+function Trifecta() {
+  return (
+    <section style={{
+      background: "var(--ink)", color: "var(--bg)",
+      borderTop: "1px solid rgba(255,255,255,0.08)",
+      borderBottom: "1px solid rgba(255,255,255,0.08)",
+      padding: "clamp(48px,7vw,88px) 0",
+      position: "relative", overflow: "hidden"
+    }}>
+      <div style={{
+        position: "absolute", inset: 0, pointerEvents: "none",
+        background: "radial-gradient(ellipse 60% 80% at 80% 50%, rgba(10,222,124,0.08), transparent 65%)"
+      }} />
+      <div className="container" style={{ position: "relative" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
+          <div>
+            <div className="kicker" style={{ color: "rgba(10,222,124,0.9)" }}>A Midpoint Global Venture</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 20, marginTop: 18, flexWrap: "wrap" }}>
+              <img src="assets/trifecta-logo-dark.svg" alt="Trifecta" style={{ height: 36, width: "auto" }} />
+            </div>
+            <p style={{ marginTop: 18, fontSize: "clamp(16px,1.4vw,18px)", color: "rgba(236,245,244,0.72)", lineHeight: 1.6, maxWidth: "58ch" }}>
+              Bayesian Marketing Mix Modeling for Indonesia's leading enterprises. Understand what drives growth, where to invest, and how to run scenario planning with statistical confidence.
+            </p>
+            <div style={{ display: "flex", gap: 12, marginTop: 28, flexWrap: "wrap" }}>
+              {["Model","Calibrate","Hypothesise"].map(p => (
+                <span key={p} style={{
+                  fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em",
+                  textTransform: "uppercase", padding: "6px 14px", borderRadius: 6,
+                  background: "rgba(10,222,124,0.12)", color: "rgba(10,222,124,0.9)",
+                  border: "1px solid rgba(10,222,124,0.2)"
+                }}>{p}</span>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 14, minWidth: 200 }}>
+            <a href="trifecta.html" className="btn btn-primary" style={{
+              background: "rgba(10,222,124,0.15)", color: "#0ADE7C",
+              border: "1px solid rgba(10,222,124,0.3)", whiteSpace: "nowrap"
+            }}>
+              Explore Trifecta
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+            <a href="mailto:rajeev@trifecta.sg" style={{
+              fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.1em",
+              textTransform: "uppercase", color: "rgba(236,245,244,0.45)",
+              textAlign: "center"
+            }}>rajeev@trifecta.sg</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Process() {
   const [active, setActive] = useState(0);
   const s = STEPS[active];
@@ -578,4 +634,4 @@ function Footer() {
   );
 }
 
-Object.assign(window, { Nav, Hero, Partners, Clients, Services, Process, ClaudeSection, Industries, About, Insights, Contact, Footer });
+Object.assign(window, { Nav, Hero, Partners, Clients, Services, Trifecta, Process, ClaudeSection, Industries, About, Insights, Contact, Footer });
