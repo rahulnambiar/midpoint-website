@@ -19,14 +19,10 @@ function Nav() {
           <a href="#process">Process</a>
           <a href="#claude">AI Delivery</a>
           <a href="#industries">Industries</a>
+          <a href="trifecta.html">Trifecta</a>
           <a href="#about">About</a>
-          <a href="#insights">Insights</a>
         </nav>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <a href="login.html" className="nav-login">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2.5" y="5.5" width="7" height="5" rx="1" stroke="currentColor" strokeWidth="1.1"/><path d="M 4 5.5 V 4 a 2 2 0 0 1 4 0 V 5.5" stroke="currentColor" strokeWidth="1.1" fill="none"/></svg>
-            Client Login
-          </a>
           <a href="#contact" className="nav-cta">
             Contact us <span style={{ display: "inline-block", transform: "translateY(-1px)" }}>↗</span>
           </a>
