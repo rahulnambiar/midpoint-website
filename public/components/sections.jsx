@@ -106,7 +106,6 @@ function Partners() {
           <PartnerMark name="Mixpanel" />
           <PartnerMark name="AWS" />
           <PartnerMark name="GCP" />
-          <PartnerMark name="Anthropic" />
         </div>
       </div>
     </section>
@@ -724,7 +723,7 @@ function Footer() {
           </div>
           <div>
             <h4>Partners</h4>
-            <ul><li>Salesforce</li><li>Mixpanel</li><li>AWS</li><li>GCP</li><li>Anthropic</li></ul>
+            <ul><li>Salesforce</li><li>Mixpanel</li><li>AWS</li><li>GCP</li></ul>
           </div>
         </div>
 

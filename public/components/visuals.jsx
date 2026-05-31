@@ -257,45 +257,16 @@ function IndustryMotif({ variant }) {
   return motifs[variant] || null;
 }
 
-// Partner logo mark, stylized typographic lockups (not trademarked artwork)
+// Real partner logos from public/assets/
 function PartnerMark({ name }) {
   const M = {
-    Salesforce: (
-      <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "Inter Tight, sans-serif", fontWeight: 700, fontSize: 22, letterSpacing: "-0.02em", lineHeight: 1, color: "#00A1E0" }}>
-        <svg width="34" height="24" viewBox="0 0 34 24"><path d="M 8 6 Q 4 6 4 11 Q 4 14 6 15 Q 4 16 4 19 Q 4 22 8 22 L 26 22 Q 30 22 30 18 Q 30 16 28 15 Q 30 14 30 11 Q 30 7 26 7 Q 24 7 23 8 Q 21 4 16 4 Q 11 4 10 8 Q 9 6 8 6 Z" fill="#00A1E0" /></svg>
-        salesforce
-      </div>
-    ),
-    Mixpanel: (
-      <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "Inter Tight, sans-serif", fontWeight: 700, fontSize: 22, letterSpacing: "-0.02em", lineHeight: 1, color: "#7856FF" }}>
-        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="4" cy="11" r="3" fill="#7856FF" /><circle cx="11" cy="11" r="4.5" fill="#7856FF" /><circle cx="19" cy="11" r="2" fill="#7856FF" /></svg>
-        Mixpanel
-      </div>
-    ),
-    AWS: (
-      <div style={{ display: "flex", flexDirection: "column", gap: 2, fontFamily: "Inter Tight, sans-serif", lineHeight: 1 }}>
-        <span style={{ fontWeight: 800, fontSize: 22, letterSpacing: "-0.02em", color: "#232F3E" }}>aws</span>
-        <svg width="34" height="8" viewBox="0 0 34 8"><path d="M 0 2 Q 10 8 17 4 Q 24 0 34 4" fill="none" stroke="#FF9900" strokeWidth="1.5" strokeLinecap="round" /><path d="M 28 2 L 34 4 L 28 6" fill="#FF9900" /></svg>
-      </div>
-    ),
-    GCP: (
-      <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "Inter Tight, sans-serif", fontWeight: 500, fontSize: 20, letterSpacing: "-0.01em", lineHeight: 1, color: "var(--ink)" }}>
-        <svg width="22" height="22" viewBox="0 0 22 22">
-          <path d="M 11 2 L 18 6 L 18 8 L 14 6 L 11 7.5 L 8 6 L 4 8 L 4 6 Z" fill="#4285F4" />
-          <path d="M 4 8 L 4 14 L 8 16 L 8 10 L 11 11.5 L 14 10 L 14 16 L 18 14 L 18 8 L 14 10 L 11 8.5 L 8 10 Z" fill="#34A853" />
-          <path d="M 4 14 L 11 18 L 11 12 L 8 10.5 Z" fill="#FBBC04" />
-          <path d="M 18 14 L 11 18 L 11 12 L 14 10.5 Z" fill="#EA4335" />
-        </svg>
-        Google Cloud
-      </div>
-    ),
-    Anthropic: (
-      <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "Inter Tight, sans-serif", fontWeight: 600, fontSize: 22, letterSpacing: "-0.02em", lineHeight: 1, color: "#0A1F26" }}>
-        <svg width="22" height="22" viewBox="0 0 22 22"><path d="M 7 18 L 10 4 L 12 4 L 15 18 L 13 18 L 12.2 14.5 L 9.8 14.5 L 9 18 Z M 10.3 12.5 L 11.7 12.5 L 11 8.5 Z" fill="#D97757" /></svg>
-        Anthropic
-      </div>
-    ),
+    Salesforce: { src: "assets/partner-salesforce.svg", alt: "Salesforce",   height: 36 },
+    Mixpanel:   { src: "assets/partner-mixpanel.svg",   alt: "Mixpanel",     height: 26 },
+    AWS:        { src: "assets/partner-aws.svg",        alt: "AWS",          height: 38 },
+    GCP:        { src: "assets/partner-gcp.svg",        alt: "Google Cloud", height: 30 },
   };
+  const logo = M[name];
+  if (!logo) return null;
   return (
     <div style={{
       padding: "18px 28px",
@@ -306,7 +277,7 @@ function PartnerMark({ name }) {
     onMouseEnter={e => e.currentTarget.style.filter = "grayscale(0)"}
     onMouseLeave={e => e.currentTarget.style.filter = "grayscale(0.2)"}
     >
-      {M[name] || name}
+      <img src={logo.src} alt={logo.alt} style={{ height: logo.height, width: "auto", maxWidth: "100%", objectFit: "contain" }} />
     </div>
   );
 }
