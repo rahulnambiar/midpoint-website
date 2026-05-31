@@ -320,45 +320,20 @@ function Logo() {
   );
 }
 
-// Stylized client wordmark, drawn typographically, not trademarked artwork
+// Real client logos from public/assets/
 function ClientMark({ brand }) {
-  const C = {
-    "XLSmart": (
-      <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "Inter Tight, sans-serif", fontWeight: 800, fontSize: 26, letterSpacing: "-0.04em", lineHeight: 1 }}>
-        <span style={{
-          background: "#0066CC", color: "#fff",
-          padding: "6px 10px", borderRadius: 6,
-          fontSize: 18, letterSpacing: "-0.02em",
-        }}>XL</span>
-        <span style={{ color: "var(--ink)" }}>Smart</span>
-      </div>
-    ),
-    "Pharos": (
-      <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "Inter Tight, sans-serif", fontWeight: 700, fontSize: 26, letterSpacing: "-0.03em", lineHeight: 1 }}>
-        <svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="none" stroke="#E30613" strokeWidth="2" /><path d="M 7 13 L 13 7 L 19 13 L 13 19 Z" fill="#E30613" /></svg>
-        <span style={{ color: "#E30613", fontStyle: "italic" }}>Pharos</span>
-      </div>
-    ),
-    "BINUS": (
-      <div style={{ display: "flex", flexDirection: "column", gap: 2, fontFamily: "Inter Tight, sans-serif", lineHeight: 1 }}>
-        <span style={{ fontWeight: 800, fontSize: 26, letterSpacing: "-0.03em", color: "#F59C00" }}>BINUS</span>
-        <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--ink-muted)" }}>University</span>
-      </div>
-    ),
-    "BFI": (
-      <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "Inter Tight, sans-serif", fontWeight: 800, fontSize: 26, letterSpacing: "-0.03em", lineHeight: 1 }}>
-        <span style={{ display: "inline-flex", alignItems: "baseline", gap: 1 }}>
-          <span style={{ color: "#D40000" }}>B</span>
-          <span style={{ color: "#D40000" }}>F</span>
-          <span style={{ color: "#FFA300" }}>I</span>
-        </span>
-        <span style={{ color: "var(--ink-muted)", fontWeight: 500, fontSize: 15, letterSpacing: "-0.01em" }}>Finance</span>
-      </div>
-    ),
+  const LOGOS = {
+    "XLSmart":  { src: "assets/client-xlsmart.svg", alt: "XLSmart",          height: 32 },
+    "BINUS":    { src: "assets/client-binus.svg",   alt: "BINUS University", height: 40 },
+    "Century":  { src: "assets/client-century.png", alt: "Century Healthcare", height: 36 },
+    "BFI":      { src: "assets/client-bfi.png",     alt: "BFI Finance",      height: 52 },
+    "Pharos":   { src: "assets/client-pharos.png",  alt: "Pharos",           height: 40 },
   };
+  const logo = LOGOS[brand];
+  if (!logo) return null;
   return (
     <div style={{
-      flex: "1 1 0", minWidth: 200,
+      flex: "1 1 0", minWidth: 180,
       padding: "28px 24px",
       borderLeft: "1px solid var(--line)",
       display: "flex", alignItems: "center", justifyContent: "center",
@@ -368,7 +343,11 @@ function ClientMark({ brand }) {
     onMouseEnter={e => { e.currentTarget.style.filter = "grayscale(0)"; e.currentTarget.style.background = "var(--bg)"; }}
     onMouseLeave={e => { e.currentTarget.style.filter = "grayscale(0.15)"; e.currentTarget.style.background = ""; }}
     >
-      {C[brand] || null}
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        style={{ height: logo.height, width: "auto", maxWidth: "100%", objectFit: "contain" }}
+      />
     </div>
   );
 }

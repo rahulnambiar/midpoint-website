@@ -19,7 +19,6 @@ function Nav() {
           <a href="#process">Process</a>
           <a href="#claude">AI Delivery</a>
           <a href="#industries">Industries</a>
-          <a href="trifecta.html">Trifecta</a>
           <a href="#about">About</a>
         </nav>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -70,7 +69,7 @@ function Hero() {
 
 // ============ CLIENTS ============
 function Clients() {
-  const brands = ["XLSmart", "Pharos", "BINUS", "BFI"];
+  const brands = ["XLSmart", "BINUS", "Century", "BFI", "Pharos"];
   return (
     <section className="section-tight" data-screen-label="02b Clients" style={{ padding: "64px 0", borderBottom: "1px solid var(--line)", background: "var(--bg)" }}>
       <div className="container">
