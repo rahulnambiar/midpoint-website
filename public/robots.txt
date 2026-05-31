@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /login.html
+Disallow: /portal
+Disallow: /portal.html
+
+Sitemap: https://midpoint.id/sitemap.xml
