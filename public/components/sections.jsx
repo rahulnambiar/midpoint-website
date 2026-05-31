@@ -203,7 +203,7 @@ const SF_PILLARS = [
   {
     n: "01",
     title: "Operations & Support",
-    body: "Day-to-day administration and platform health, so your team focuses on outcomes — not tickets.",
+    body: "Day-to-day administration and platform health, so your team can focus on outcomes instead of tickets.",
     items: [
       "System administration",
       "Application maintenance",
@@ -216,7 +216,7 @@ const SF_PILLARS = [
   {
     n: "02",
     title: "Solutions & Development",
-    body: "Custom builds on Lightning, Apex, and LWC — paired with Claude-accelerated delivery.",
+    body: "Custom builds on Lightning, Apex, and LWC, with Claude accelerating mappings, tests, and scaffolding.",
     items: [
       "Custom development (Apex, LWC, Flow)",
       "AppExchange evaluation & integration",
@@ -270,9 +270,9 @@ function Salesforce() {
             <h2 className="h2">A senior-led Salesforce partner, from Jakarta.</h2>
           </div>
           <p className="lede">
-            We run, build, and optimise Salesforce across Sales, Service, Data Cloud, and Marketing Cloud —
-            paired with Claude agents that compress delivery cycles. Implementation, managed services, and
-            advisory under one roof.
+            We run, build, and optimise Salesforce across Sales, Service, Data Cloud, and Marketing Cloud
+            for Indonesia's leading enterprises. From implementation to managed services to advisory, our
+            Jakarta team delivers it all.
           </p>
         </div>
 
