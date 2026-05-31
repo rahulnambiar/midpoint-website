@@ -200,6 +200,119 @@ function Services() {
   );
 }
 
+// ============ SALESFORCE PRACTICE ============
+const SF_PILLARS = [
+  {
+    n: "01",
+    title: "Operations & Support",
+    body: "Day-to-day administration and platform health, so your team focuses on outcomes — not tickets.",
+    items: [
+      "System administration",
+      "Application maintenance",
+      "Release management",
+      "Data & integration management",
+      "Security & access controls",
+      "Health monitoring",
+    ],
+  },
+  {
+    n: "02",
+    title: "Solutions & Development",
+    body: "Custom builds on Lightning, Apex, and LWC — paired with Claude-accelerated delivery.",
+    items: [
+      "Custom development (Apex, LWC, Flow)",
+      "AppExchange evaluation & integration",
+      "Workflow & automation",
+      "Integration development (MuleSoft, API)",
+      "Testing & QA",
+      "DevOps & version control",
+    ],
+  },
+  {
+    n: "03",
+    title: "Platform Optimisation",
+    body: "Reclaim performance, simplify configuration, and lift adoption across your org.",
+    items: [
+      "Performance & process optimisation",
+      "Dashboard & reporting uplift",
+      "User adoption programs",
+      "Data quality remediation",
+      "Technical debt management",
+      "Org complexity assessment",
+    ],
+  },
+  {
+    n: "04",
+    title: "Advisory & Roadmapping",
+    body: "Senior advisors who help you sequence the right work, govern it, and measure impact.",
+    items: [
+      "Strategic roadmapping",
+      "Governance & best practices",
+      "Architecture advisory",
+      "Feature evaluation & adoption",
+      "Training & enablement",
+      "Compliance & risk (UU PDP)",
+    ],
+  },
+];
+
+const SF_CLOUDS = [
+  "Sales Cloud", "Service Cloud", "Data Cloud", "Marketing Cloud",
+  "Experience Cloud", "Financial Services", "Agentforce", "Einstein",
+  "MuleSoft", "Tableau",
+];
+
+function Salesforce() {
+  return (
+    <section className="section" id="salesforce" data-screen-label="03b Salesforce" style={{ background: "var(--bg-elev)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+      <div className="container">
+        <div className="sec-head">
+          <div className="title-block">
+            <div className="kicker">Salesforce Practice</div>
+            <h2 className="h2">A senior-led Salesforce partner, from Jakarta.</h2>
+          </div>
+          <p className="lede">
+            We run, build, and optimise Salesforce across Sales, Service, Data Cloud, and Marketing Cloud —
+            paired with Claude agents that compress delivery cycles. Implementation, managed services, and
+            advisory under one roof.
+          </p>
+        </div>
+
+        <div className="sf-grid">
+          {SF_PILLARS.map((p) => (
+            <div className="sf-pillar" key={p.n}>
+              <div className="sf-pillar-head">
+                <span className="sf-tag">{p.n}</span>
+                <h3 className="h3">{p.title}</h3>
+              </div>
+              <p className="body">{p.body}</p>
+              <ul className="sf-bullets">
+                {p.items.map((i) => (
+                  <li key={i}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+                      <path d="M3 7l3 3 5-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>{i}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="sf-clouds">
+          <div className="sf-clouds-label">
+            <span className="mono" style={{ color: "var(--ink-dim)" }}>// clouds & tools we cover</span>
+          </div>
+          <div className="sf-clouds-list">
+            {SF_CLOUDS.map((c) => <span className="sf-cloud-chip" key={c}>{c}</span>)}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ PROCESS ============
 const STEPS = [
   {
@@ -629,4 +742,4 @@ function Footer() {
   );
 }
 
-Object.assign(window, { Nav, Hero, Partners, Clients, Services, Trifecta, Process, ClaudeSection, Industries, About, Insights, Contact, Footer });
+Object.assign(window, { Nav, Hero, Partners, Clients, Services, Salesforce, Trifecta, Process, ClaudeSection, Industries, About, Insights, Contact, Footer });

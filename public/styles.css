@@ -260,6 +260,61 @@ img, svg { max-width: 100%; display: block; }
   background: var(--surface); color: var(--ink-muted);
 }
 
+/* ---------- Salesforce Practice ---------- */
+.sf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 820px) { .sf-grid { grid-template-columns: 1fr; } }
+
+.sf-pillar {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex; flex-direction: column;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.sf-pillar:hover {
+  border-color: var(--line-strong);
+  box-shadow: 0 12px 32px -16px rgba(10,30,30,0.12);
+  transform: translateY(-2px);
+}
+.sf-pillar-head { display: flex; align-items: baseline; gap: 14px; }
+.sf-pillar-head .sf-tag {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent);
+}
+.sf-pillar h3 { color: var(--ink); }
+.sf-pillar .body { margin-top: 12px; color: var(--ink-muted); font-size: 15px; line-height: 1.55; }
+.sf-bullets {
+  margin-top: 22px; list-style: none;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px;
+}
+@media (max-width: 560px) { .sf-bullets { grid-template-columns: 1fr; } }
+.sf-bullets li {
+  display: grid; grid-template-columns: 16px 1fr; gap: 10px; align-items: start;
+  font-size: 14px; color: var(--ink); line-height: 1.45;
+}
+.sf-bullets li svg { color: var(--accent); margin-top: 4px; }
+
+.sf-clouds {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: 32px; align-items: center;
+}
+@media (max-width: 820px) { .sf-clouds { grid-template-columns: 1fr; gap: 16px; } }
+.sf-clouds-list { display: flex; gap: 8px; flex-wrap: wrap; }
+.sf-cloud-chip {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+  padding: 6px 10px; border-radius: 4px;
+  background: var(--bg); color: var(--ink-muted);
+  border: 1px solid var(--line);
+}
+
 /* ---------- Process ---------- */
 .process-wrap { position: relative; }
 .process-steps { display: grid; grid-template-columns: 180px 1fr; gap: 40px; align-items: start; }

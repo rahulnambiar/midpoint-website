@@ -1,4 +1,4 @@
-/* global React, ReactDOM, Nav, Hero, Partners, Clients, Services, Trifecta, Process, ClaudeSection, Industries, About, Contact, Footer, TweaksPanel */
+/* global React, ReactDOM, Nav, Hero, Partners, Clients, Services, Salesforce, Trifecta, Process, ClaudeSection, Industries, About, Contact, Footer, TweaksPanel */
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Partners />
         <Clients />
         <Services />
+        <Salesforce />
         <Trifecta />
         <Process />
         <ClaudeSection />
